@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    min-height: 97vh;
+    background-color: #1c1c1c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.circle{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background-color: #1c1c1c;
+    border-radius: 50%;
+    border: 8px #1c1c1c solid ;
+    border-right-color:blue;
+    border-left-color:blue;
+    animation: anim 2s infinite linear;
+}
+.logo{
+    font-size: 45px;
+    animation: logo 2s infinite linear;
+    position: absolute;
+    color: blue;
+    font-family: 'Orbitron', sans-serif;
+}
+@keyframes anim {
+    from{
+        transform:  rotate(0deg);
+        border-right-color:blue;
+        border-left-color:blue;
+    }
+    10%{
+        border-right-color:violet;
+        border-left-color:violet;
+    }
+    30%{
+        border-right-color: red;
+        border-left-color:red;
+    }
+    50%{
+        border-right-color:palegreen;
+        border-left-color:palegreen;
+    }
+    70%{
+        border-right-color:white;
+        border-left-color:white;
+    }
+    90%{
+        border-right-color:yellow;
+        border-left-color:yellow;
+    }
+    to{
+        transform:  rotate(360deg);
+        border-right-color:blue;
+        border-left-color:blue;
+    }
+}
+@keyframes logo {
+    10%{
+        color: violet;
+    }
+    30%{
+        color: red;
+    }
+    50%{
+        color: palegreen;
+    }
+    70%{
+        color: white;
+    }
+    90%{
+        color: yellow;
+    }
+    to{
+        color: blue;
+    }
+}
+

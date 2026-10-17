@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink"
+width="200px" height="200px"
+xml:space="preserve">
+<filter id="filter7" x="-0.51" y="-0.51" width="2.2" height="2.2" >
+<feComponentTransfer in="SourceGraphic">
+	<feFuncR type="linear" slope="0"/>
+	<feFuncG type="linear" slope="0"/>
+	<feFuncB type="linear" slope="0"/>
+</feComponentTransfer>
+<feGaussianBlur stdDeviation="0 0" />
+<feOffset result="1" dx="9.82983" dy="6.88291"/>
+<feComponentTransfer in="SourceGraphic">
+	<feFuncR type="linear" slope="0"/>
+	<feFuncG type="linear" slope="0"/>
+	<feFuncB type="linear" slope="0"/>
+</feComponentTransfer>
+<feGaussianBlur stdDeviation="0 0" />
+<feOffset result="2" dx="-9.82983" dy="-6.88291"/>
+<feComposite  in="1" in2="2" operator="arithmetic" k2="1" k3="-1"/>
+<feComponentTransfer result="3">
+	<feFuncR type="linear" Ue="0" intercept="1"/>
+	<feFuncG type="linear" Ue="0" intercept="0.298039"/>
+	<feFuncB type="linear" Ue="0" intercept="0.298039"/>
+	<feFuncA type="linear" xh="0" slope="1"/>
+</feComponentTransfer>
+<feComposite  in="2" in2="1" operator="arithmetic" k2="1" k3="-1"/>
+<feComponentTransfer result="4">
+	<feFuncR type="linear" Ue="0" intercept="0.6"/>
+	<feFuncG type="linear" Ue="0" intercept="0"/>
+	<feFuncB type="linear" Ue="0" intercept="0"/>
+	<feFuncA type="linear" xh="0" slope="1"/>
+</feComponentTransfer>
+<feComposite result="5"  in="3" in2="4" operator="arithmetic" k2="1" k3="1"/>
+<feComposite result="6"  in="5" in2="SourceGraphic" operator="atop"/>
+</filter>
+<g style="filter:url(#filter7);">
+<g id="PathID_1" transform="matrix(0.598479, 0, 0, 0.598479, 55.45, 55.95)" opacity="1">
+<path style="fill:#FF0000;fill-opacity:1" d="M158.6 40.3L158.6 99.45L99.45 99.45L99.45 158.6L40.35 158.6L0.9 119.2L60.05 119.2L60.05 60L119.15 60L119.15 0.95L158.6 40.3M0 59.15L0 0L59.15 0L98.55 39.4L39.4 39.4L39.4 98.55L0 59.15" />
+</g>
+<g id="PathID_2" transform="matrix(0.598479, 0, 0, 0.598479, 55.45, 55.95)" opacity="1">
+</g>
+</g>
+</svg>

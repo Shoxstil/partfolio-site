@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" href="Без названия.svg">
+    <title>SHOXa | Portfolio</title>
+
+    <link href="./aos.css" rel="stylesheet">
+</head>
+ <body id="home">
+    <div class="loading">
+        <div class="circle"></div>
+        <div class="load">SH</div>
+    </div>
+    <header>
+        <nav id="myNav" class="overlay" aria-label="Mobile navigation" inert>
+
+        <a href="javascript:void(0)" class="closebtn" aria-label="Close menu" onclick="closeNav()">&times;</a>
+  
+        <div class="overlay-content">
+            <a href="#home"><i class="fa-solid fa-house"></i>Home</a>
+            <a href="#works"><i class="fa-solid fa-gears"></i>Works</a>
+            <a href="#skills"><i class="fa-solid fa-square-poll-horizontal"></i>Skills</a>
+            <a href="#about"><i class="fa-solid fa-user-astronaut"></i>About Me</a>
+        </div>
+    </nav>
+        <div class="logo">
+            <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="myNav" aria-expanded="false" onclick="openNav()">☰</button>
+            SHOXa
+        </div>
+        <ul class="header_menu" >
+            <li>
+                <a href="#home">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#works">
+                    <i class="fa-solid fa-gears"></i>
+                    Works
+                </a>
+            </li>
+            <li>
+                <a href="#skills">
+                    <i class="fa-solid fa-square-poll-horizontal"></i>
+                    Skills
+                </a>
+            </li>
+            <li>
+                <a href="#about">
+                    <i class="fa-solid fa-user-astronaut"></i>
+                    About Me
+                </a>
+            </li>
+        </ul>
+    </header>
+    <div class="img">
+        <img src="./img/hello-world-4k-0o-1366x768.jpg" alt="Hello world on a dark background" style="width:100%;">
+        <div class="typewriter">
+            <h2>I'm 
+                <span class="typer" id="main" data-words="  Shavkatov Shokhrukh, Web developer , App developer , Programmer" data-delay="100" data-deleteDelay="1000" style="color: #fff;">Shavkatov Shokhrukh</span>
+                <span class="cursor" data-owner="main" data-cursor-display=" "></span>
+            </h2>
+        </div>
+      </div>
+      
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2c2c2c" fill-opacity="1" d="M0,32L34.3,37.3C68.6,43,137,53,206,80C274.3,107,343,149,411,165.3C480,181,549,171,617,144C685.7,117,754,75,823,90.7C891.4,107,960,181,1029,224C1097.1,267,1166,277,1234,250.7C1302.9,224,1371,160,1406,128L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+    <ul class="facts" id="about">
+        <li>
+            <img src="./img/SVG.svg" alt="" data-aos="zoom-in-up" class="gyro">
+        </li>
+        <li>
+            <div class="typewrite" data-aos="zoom-in-up">
+                <h2>
+                    Interesting Facts
+                </h2>
+            </div>
+            <p>
+
+            </p>
+        </li>
+    </ul>
+    <div id="particles-js"></div>
+    <script src="particles.js"></script>
+    <script src="./js/app.js"></script>
+        <div class="skill_box" id="skills">
+            <div class="level">
+                <div class="level_box">
+                    <h3>Pro</h3>
+                    <h3>Norm</h3>
+                    <h3>Noob</h3>
+                    <h3>All is bad</h3>
+                </div>
+                <div class="stick"></div>
+            </div>
+            <ul class="skills" aria-label="Programming skills">
+                <li class="skill-column" data-level="89" style="--level: 89%; --bar-color: #ffa500">
+                    <div class="skill-track" role="meter" aria-label="HTML" aria-valuemin="0" aria-valuemax="100" aria-valuenow="89">
+                        <span class="text-skill" aria-hidden="true">89%</span>
+                        <div class="skill-bar"><img src="./img/html5.png" alt="" class="icons"></div>
+                    </div>
+                    <span class="skill-name">HTML</span>
+                </li>
+                <li class="skill-column" data-level="79" style="--level: 79%; --bar-color: #2500ff">
+                    <div class="skill-track" role="meter" aria-label="CSS" aria-valuemin="0" aria-valuemax="100" aria-valuenow="79">
+                        <span class="text-skill" aria-hidden="true">79%</span>
+                        <div class="skill-bar"><img src="./img/css3.png" alt="" class="icons"></div>
+                    </div>
+                    <span class="skill-name">CSS</span>
+                </li>
+                <li class="skill-column" data-level="47" style="--level: 47%; --bar-color: #ffff00">
+                    <div class="skill-track" role="meter" aria-label="JavaScript" aria-valuemin="0" aria-valuemax="100" aria-valuenow="47">
+                        <span class="text-skill" aria-hidden="true">47%</span>
+                        <div class="skill-bar"><img src="./img/js.png" alt="" class="icons"></div>
+                    </div>
+                    <span class="skill-name">JavaScript</span>
+                </li>
+                <li class="skill-column" data-level="70" style="--level: 70%; --bar-color: #096b9d">
+                    <div class="skill-track" role="meter" aria-label="Python" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70">
+                        <span class="text-skill" aria-hidden="true">70%</span>
+                        <div class="skill-bar"><img src="./img/python_104451.png" alt="" class="icons"></div>
+                    </div>
+                    <span class="skill-name">Python</span>
+                </li>
+                <li class="skill-column" data-level="30" style="--level: 30%; --bar-color: #478cbf">
+                    <div class="skill-track" role="meter" aria-label="GDScript" aria-valuemin="0" aria-valuemax="100" aria-valuenow="30">
+                        <span class="text-skill" aria-hidden="true">30%</span>
+                        <div class="skill-bar"><img src="./img/godot.svg" alt="" class="icons"></div>
+                    </div>
+                    <span class="skill-name">GDScript</span>
+                </li>
+            </ul>
+        </div>
+        <ul class="main-facts">
+            <li class="fact-child gyro" data-aos="fade-right">
+                <img src="./img/quotation.svg" alt="">
+                <div class="title" >Drop of humor</div>
+                <ul>
+                    <li>I Drink Water</li>
+                    <li>I love Drop of humor</li>
+                    <li>I have Laptop</li>
+                    <li>I don't have a pet</li>
+                </ul>
+            </li>
+            <li class="fact-child gyro" data-aos="fade-in">
+                <img src="./img/quotation.svg" alt="">
+                <div class="title">What do i use Js</div>
+                <ul>
+                    <li>For Websites </li>
+                    <li>For Sliders</li>
+                    <li>For Calculators</li>
+                    <li>For Animations</li>
+                </ul>
+            </li>
+            <li class="fact-child gyro" data-aos="fade-left">
+                <img src="./img/quotation.svg" alt="">
+                <div class="title">What do i use Js</div>
+                <ul>
+                    <li>For Websites </li>
+                    <li>For Sliders</li>
+                    <li>For Calculators</li>
+                    <li>For Animations</li>
+                </ul>
+            </li>
+            <li class="fact-child gyro" data-aos="fade-right">
+                <img src="./img/quotation.svg" alt="">
+                <div class="title">What do i use Js</div>
+                <ul>
+                    <li>For Websites </li>
+                    <li>For Sliders</li>
+                    <li>For Calculators</li>
+                    <li>For Animations</li>
+                </ul>
+            </li>
+            <li class="fact-child gyro" data-aos="fade-in">
+                <img src="./img/quotation.svg" alt="">
+                <div class="title">What do i use Js</div>
+                <ul>
+                    <li>For Websites </li>
+                    <li>For Sliders</li>
+                    <li>For Calculators</li>
+                    <li>For Animations</li>
+                </ul>
+            </li>
+            <li class="fact-child gyro" data-aos="fade-left">
+                <img src="./img/quotation.svg" alt="">
+                <div class="title">(Copyright ©)</div>
+                <ul>
+                    <li>
+                        <a href="https://www.flaticon.com/">Icons from Flaticon</a>
+                    </li>
+                    <li>
+                        <a href="https://fontawesome.com/icons">Icons from Font-Awesome</a>
+                    </li>
+                    <li>
+                        <a href="https://www.freepik.com/">Img from Freepik</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="middle_main_box">
+            <ul class="facts">
+                <li>
+                    <img src="./img/SVG.svg" alt="" data-aos="zoom-in-up">
+                </li>
+                <li>
+                    <div class="typewrite" id="works" data-aos="zoom-in-up">
+                        <h2>
+                            The Hardest Works
+                        </h2>
+                    </div>
+                </li>
+            </ul>
+            
+            <div id="particles-j"></div>
+            <ul class="main_information">
+                <li class="main_information_child">
+                    <span class="main_icon">
+                        <i class="fa-solid fa-align-right"></i>
+                    </span>
+                    <div class="score">
+                        59+
+                    </div>
+                    <div class="main_title">
+                        Projects
+                    </div>
+                </li>
+                <li class="main_information_child">
+                    <span class="main_icon">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                    <div class="score">
+                        <i class="fa-solid fa-infinity"></i>
+                    </div>
+                    <div class="main_title">Happy clients</div>
+                </li>
+                <li class="main_information_child">
+                    <span class="main_icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </span>
+                    <div class="score">390+</div>
+                    <div class="main_title">Hours of code</div>
+                </li>
+                <li class="main_information_child">
+                    <span class="main_icon">
+                        <i class="fa-solid fa-code"></i>
+                    </span>
+                    <div class="score">10000+</div>
+                    <div class="main_title">Lines of code</div>
+                </li>
+            </ul>
+        </div>
+    <script type="text/javascript" src="./js/vanilla.min.js"></script>
+    <script src="./js/ap.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./aos.js"></script>
+    <script src="./js/scroll.js"></script>
+    <script type="text/javascript">
+	if (window.VanillaTilt) VanillaTilt.init(document.querySelectorAll(".gyro"), {
+		max: 25,
+		speed: 400
+	});
+</script>
+
+</body>
+</html>
