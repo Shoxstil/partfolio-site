@@ -1,0 +1,24 @@
+/* Original white ring + dot. Only hide the system cursor after a mouse moves. */
+.kursor,
+.kursorChild {
+  visibility: hidden;
+  z-index: 200;
+}
+
+html.cursor-enabled,
+html.cursor-enabled *,
+html.cursor-enabled dialog::backdrop {
+  cursor: none !important;
+}
+
+.cursor-enabled .kursor,
+.cursor-enabled .kursorChild {
+  visibility: visible;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  div.kursor.kursor--1,
+  div.kursor.kursor--1 + .kursorChild {
+    transition: none;
+  }
+}
