@@ -1,6 +1,6 @@
 "use strict";
 
-// Same library, type and colour as the owner's original 2023 portfolio.
+// Keep the original cursor's two-speed follow, now as a planet and satellite.
 (() => {
   if (typeof window.kursor !== "function") return;
 
@@ -16,6 +16,20 @@
     });
     cursor.kursor.setAttribute("aria-hidden", "true");
     cursor.kursorChild.setAttribute("aria-hidden", "true");
+
+    const planet = document.createElement("span");
+    planet.className = "cursor-planet";
+    cursor.kursorChild.append(planet);
+
+    const plane = document.createElement("span");
+    plane.className = "cursor-orbit-plane";
+    const rotor = document.createElement("span");
+    rotor.className = "cursor-orbit-rotor";
+    const satellite = document.createElement("span");
+    satellite.className = "cursor-satellite";
+    rotor.append(satellite);
+    plane.append(rotor);
+    cursor.kursor.append(plane);
   }
 
   function hide() {
