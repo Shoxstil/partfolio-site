@@ -1,270 +1,815 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="icon" href="Без названия.svg">
-    <title>SHOXa | Portfolio</title>
-
-    <link href="./aos.css" rel="stylesheet">
-</head>
- <body id="home">
-    <div class="loading">
-        <div class="circle"></div>
-        <div class="load">SH</div>
-    </div>
-    <header>
-        <nav id="myNav" class="overlay" aria-label="Mobile navigation" inert>
-
-        <a href="javascript:void(0)" class="closebtn" aria-label="Close menu" onclick="closeNav()">&times;</a>
-  
-        <div class="overlay-content">
-            <a href="#home"><i class="fa-solid fa-house"></i>Home</a>
-            <a href="#works"><i class="fa-solid fa-gears"></i>Works</a>
-            <a href="#skills"><i class="fa-solid fa-square-poll-horizontal"></i>Skills</a>
-            <a href="#about"><i class="fa-solid fa-user-astronaut"></i>About Me</a>
-        </div>
-    </nav>
-        <div class="logo">
-            <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="myNav" aria-expanded="false" onclick="openNav()">☰</button>
-            SHOXa
-        </div>
-        <ul class="header_menu" >
-            <li>
-                <a href="#home">
-                    <i class="fa-solid fa-house"></i>
-                    Home
-                </a>
-            </li>
-            <li>
-                <a href="#works">
-                    <i class="fa-solid fa-gears"></i>
-                    Works
-                </a>
-            </li>
-            <li>
-                <a href="#skills">
-                    <i class="fa-solid fa-square-poll-horizontal"></i>
-                    Skills
-                </a>
-            </li>
-            <li>
-                <a href="#about">
-                    <i class="fa-solid fa-user-astronaut"></i>
-                    About Me
-                </a>
-            </li>
-        </ul>
-    </header>
-    <div class="img">
-        <img src="./img/hello-world-4k-0o-1366x768.jpg" alt="Hello world on a dark background" style="width:100%;">
-        <div class="typewriter">
-            <h2>I'm 
-                <span class="typer" id="main" data-words="  Shavkatov Shokhrukh, Web developer , App developer , Programmer" data-delay="100" data-deleteDelay="1000" style="color: #fff;">Shavkatov Shokhrukh</span>
-                <span class="cursor" data-owner="main" data-cursor-display=" "></span>
-            </h2>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090c10" />
+    <meta
+      name="description"
+      content="Shokhrukh Shavkatov — creative developer exploring the intersection of websites, interactive experiences and games."
+    />
+    <title>SHOXa — Code. Create. Explore.</title>
+    <link rel="icon" href="./Без названия.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="./vendor/orbitron/orbitron-latin-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./particles.js" defer></script>
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner container">
+        <a class="logo" href="#home" aria-label="SHOXa home"
+          >SHOX<span>a</span><span class="logo-dot" aria-hidden="true"></span
+        ></a>
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="#about">About</a><a href="#skills">Skills</a
+          ><a href="#lab">My toolkit</a><a href="#works">Works</a>
+        </nav>
+        <a
+          class="header-contact"
+          href="https://github.com/Shoxstil"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Find me on GitHub
+          <span aria-hidden="true"
+            ><svg
+              class="arrow-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <path d="M5 19 19 5M5 5h14v14" /></svg></span
+        ></a>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="myNav"
+          aria-expanded="false"
+        >
+          <span></span><span></span>
+        </button>
       </div>
-      
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2c2c2c" fill-opacity="1" d="M0,32L34.3,37.3C68.6,43,137,53,206,80C274.3,107,343,149,411,165.3C480,181,549,171,617,144C685.7,117,754,75,823,90.7C891.4,107,960,181,1029,224C1097.1,267,1166,277,1234,250.7C1302.9,224,1371,160,1406,128L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
-    <ul class="facts" id="about">
-        <li>
-            <img src="./img/SVG.svg" alt="" data-aos="zoom-in-up" class="gyro">
-        </li>
-        <li>
-            <div class="typewrite" data-aos="zoom-in-up">
-                <h2>
-                    Interesting Facts
-                </h2>
+    </header>
+    <nav id="myNav" class="overlay" aria-label="Mobile navigation" inert>
+      <div class="mobile-nav-top">
+        <span class="eyebrow">Navigation</span
+        ><button class="closebtn" type="button" aria-label="Close menu">
+          ×
+        </button>
+      </div>
+      <div class="overlay-content">
+        <a href="#home">Home <span>00</span></a
+        ><a href="#about">About <span>01</span></a
+        ><a href="#skills">Skills <span>02</span></a
+        ><a href="#lab">My toolkit <span>03</span></a
+        ><a href="#works">Works <span>04</span></a>
+      </div>
+      <a
+        class="mobile-github"
+        href="https://github.com/Shoxstil"
+        target="_blank"
+        rel="noopener noreferrer"
+        >GitHub / Shoxstil
+        <svg
+          class="arrow-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          aria-hidden="true"
+        >
+          <path d="M5 19 19 5M5 5h14v14" /></svg
+      ></a>
+    </nav>
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <img
+          class="hero-space"
+          src="./img/deep-space.png"
+          alt=""
+          width="1672"
+          height="941"
+          fetchpriority="high"
+        />
+        <div class="hero-shade"></div>
+        <div id="particles-js" aria-hidden="true"></div>
+        <div class="hero-content container">
+          <div class="hero-eyebrow">
+            <span class="signal-dot"></span
+            ><span>Personal portfolio / Shokhrukh Shavkatov</span>
+          </div>
+          <h1 id="hero-title">
+            hello,<br /><span class="outline-word">world.</span
+            ><span class="hero-cursor" aria-hidden="true">_</span>
+          </h1>
+          <p class="intro-line">
+            I'm
+            <span
+              class="typer"
+              data-words="a web developer,a Python developer,a game explorer"
+              >a web developer</span
+            ><span class="typing-cursor" aria-hidden="true">|</span>
+          </p>
+          <p class="hero-description">
+            Turning curiosity into code.<br />Websites, small experiments &amp;
+            digital worlds.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#works"
+              >Explore my work
+              <span aria-hidden="true"
+                ><svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <path d="M5 19 19 5M5 5h14v14" /></svg></span></a
+            ><a class="text-link" href="#about"
+              >A little about me <span aria-hidden="true">↓</span></a
+            >
+          </div>
+        </div>
+        <div class="hero-coordinate" aria-hidden="true">
+          <span class="coordinate-cross">+</span
+          ><span
+            >EXPLORING THE DIGITAL UNIVERSE<br />NO LIMITS. JUST
+            CURIOSITY.</span
+          >
+        </div>
+        <a class="scroll-cue" href="#about"
+          ><span class="scroll-line" aria-hidden="true"></span>Scroll to
+          explore</a
+        >
+        <svg
+          class="hero-waves"
+          viewBox="0 0 1440 180"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <g class="wave wave-back">
+            <path
+              d="M-1440 100Q-1080 0-720 100T0 100T720 100T1440 100T2160 100T2880 100V220H-1440Z"
+            />
+          </g>
+          <g class="wave wave-mid">
+            <path
+              d="M-1440 100Q-1080 180-720 100T0 100T720 100T1440 100T2160 100T2880 100V220H-1440Z"
+            />
+          </g>
+          <g class="wave wave-front">
+            <path
+              d="M-1440 130Q-1080 50-720 130T0 130T720 130T1440 130T2160 130T2880 130V220H-1440Z"
+            />
+          </g>
+        </svg>
+      </section>
+
+      <section
+        class="about-section section container"
+        id="about"
+        aria-labelledby="about-title"
+      >
+        <div class="section-index reveal">
+          <span>01 / A LITTLE ABOUT ME</span><span class="index-line"></span
+          ><span>THE HUMAN BEHIND THE CODE</span>
+        </div>
+        <div class="about-grid">
+          <div class="reveal">
+            <h2 id="about-title">
+              Curiosity is<br />my <span class="accent">source code.</span>
+            </h2>
+            <p class="body-copy">
+              I'm Shokhrukh Shavkatov. I enjoy making things for the web,
+              exploring Python and bringing ideas to life with Godot.
+            </p>
+            <p class="body-copy muted">
+              This portfolio started in 2023. Today, it's a space to keep
+              experimenting, learning and building something a little more
+              interesting.
+            </p>
+            <div class="about-notes">
+              <span><span class="small-cross">+</span> Details matter</span
+              ><span
+                ><span class="small-cross">+</span> Always experimenting</span
+              >
+            </div>
+          </div>
+          <div class="code-window reveal" data-tilt>
+            <div class="window-bar">
+              <span class="window-dots"><i></i><i></i><i></i></span
+              ><span>about_me.js</span
+              ><span class="window-code">&lt;/&gt;</span>
+            </div>
+            <pre
+              aria-label="A little about me in code"
+            ><code><span class="code-muted">// A work in progress. Just like me.</span>
+<span class="code-purple">const</span> developer = {
+  name: <span class="code-mint">"Shokhrukh"</span>,
+  interests: [
+    <span class="code-mint">"web experiences"</span>,
+    <span class="code-mint">"Python &amp; automation"</span>,
+    <span class="code-mint">"games &amp; GDScript"</span>
+  ],
+  fuel: <span class="code-mint">"water + curiosity"</span>
+};
+
+<span class="code-purple">while</span> (curious) {
+  learn(); create(); repeat();
+}<span class="code-caret" aria-hidden="true">▌</span></code></pre>
+            <div class="window-status">
+              <span class="signal-dot"></span> Still learning. Always
+              building.<span>UTF-8</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="skills-section section container"
+        id="skills"
+        aria-labelledby="skills-title"
+      >
+        <div class="section-index reveal">
+          <span>02 / MY KNOWLEDGE</span><span class="index-line"></span
+          ><span>EVOLVING, ONE COMMIT AT A TIME</span>
+        </div>
+        <div class="section-heading reveal">
+          <div>
+            <h2 id="skills-title">
+              A growing <span class="accent">toolkit.</span>
+            </h2>
+            <p class="body-copy muted">
+              The languages I use to turn an idea into something real.
+            </p>
+          </div>
+          <span class="tiny-label">PERSONAL SKILL ESTIMATES / %</span>
+        </div>
+        <div class="skill_box">
+          <div class="level" aria-hidden="true">
+            <div class="level_box">
+              <span>Pro</span><span>Norm</span><span>Noob</span
+              ><span>Exploring</span>
+            </div>
+          </div>
+          <ul class="skills" aria-label="Programming skills">
+            <li class="skill-column" data-level="89" style="--level: 89%">
+              <div
+                class="skill-track"
+                role="meter"
+                aria-label="HTML"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="89"
+              >
+                <span class="text-skill" aria-hidden="true">89%</span>
+                <div class="skill-bar">
+                  <img
+                    class="icons"
+                    src="./img/html5.png"
+                    width="48"
+                    height="48"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <span class="skill-name">HTML</span
+              ><span class="skill-caption">STRUCTURE</span>
+            </li>
+            <li class="skill-column" data-level="79" style="--level: 79%">
+              <div
+                class="skill-track"
+                role="meter"
+                aria-label="CSS"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="79"
+              >
+                <span class="text-skill" aria-hidden="true">79%</span>
+                <div class="skill-bar">
+                  <img
+                    class="icons"
+                    src="./img/css3.png"
+                    width="48"
+                    height="48"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <span class="skill-name">CSS</span
+              ><span class="skill-caption">EXPRESSION</span>
+            </li>
+            <li class="skill-column" data-level="47" style="--level: 47%">
+              <div
+                class="skill-track"
+                role="meter"
+                aria-label="JavaScript"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="47"
+              >
+                <span class="text-skill" aria-hidden="true">47%</span>
+                <div class="skill-bar">
+                  <img
+                    class="icons"
+                    src="./img/js.png"
+                    width="48"
+                    height="48"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <span class="skill-name">JavaScript</span
+              ><span class="skill-caption">INTERACTION</span>
+            </li>
+            <li class="skill-column" data-level="70" style="--level: 70%">
+              <div
+                class="skill-track"
+                role="meter"
+                aria-label="Python"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="70"
+              >
+                <span class="text-skill" aria-hidden="true">70%</span>
+                <div class="skill-bar">
+                  <img
+                    class="icons"
+                    src="./img/python_104451.png"
+                    width="48"
+                    height="48"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <span class="skill-name">Python</span
+              ><span class="skill-caption">LOGIC</span>
+            </li>
+            <li class="skill-column" data-level="30" style="--level: 30%">
+              <div
+                class="skill-track"
+                role="meter"
+                aria-label="GDScript"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="30"
+              >
+                <span class="text-skill" aria-hidden="true">30%</span>
+                <div class="skill-bar">
+                  <img
+                    class="icons"
+                    src="./img/godot.svg"
+                    width="48"
+                    height="48"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <span class="skill-name">GDScript</span
+              ><span class="skill-caption">PLAY</span>
+            </li>
+          </ul>
+        </div>
+        <div class="chart-footer">
+          <span
+            ><span class="signal-dot"></span> Learning never really reaches
+            100%.</span
+          ><span>HTML / CSS / JS / PY / GD</span>
+        </div>
+      </section>
+
+      <section
+        class="toolkit-section section container"
+        id="lab"
+        aria-labelledby="lab-title"
+      >
+        <div class="section-index reveal">
+          <span>03 / FROM CODE TO EXPERIENCE</span
+          ><span class="index-line"></span><span>WHAT I USE IT FOR</span>
+        </div>
+        <div class="section-heading reveal">
+          <h2 id="lab-title">
+            Different tools.<br /><span class="accent">One creative mind.</span>
+          </h2>
+          <p class="body-copy muted section-side-copy">
+            A good interface has more than a look.<br />It has logic, rhythm and
+            a little personality.
+          </p>
+        </div>
+        <div class="toolkit-grid">
+          <article class="tool-card reveal" data-tilt>
+            <div class="tool-top">
+              <span class="tool-icon">{ }</span
+              ><span class="tiny-label">01 / JAVASCRIPT</span>
+            </div>
+            <div class="tool-art art-js" aria-hidden="true">
+              <span class="art-line"></span
+              ><span class="art-node node-one"></span
+              ><span class="art-node node-two"></span
+              ><span class="art-node node-three"></span
+              ><span class="art-cursor"
+                ><svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <path d="M5 19 19 5M5 5h14v14" /></svg></span
+              ><span class="art-tag">onClick → create()</span>
+            </div>
+            <h3>Make it feel alive.</h3>
+            <p>
+              Interfaces that respond. Smooth motion, playful interactions and
+              the little details that make a website feel right.
+            </p>
+            <div class="tags">
+              <span>Web interfaces</span><span>Animation</span
+              ><span>Interaction</span>
+            </div>
+          </article>
+          <article class="tool-card reveal" data-tilt>
+            <div class="tool-top">
+              <span class="tool-icon">&gt;_</span
+              ><span class="tiny-label">02 / PYTHON</span>
+            </div>
+            <div class="tool-art art-python" aria-hidden="true">
+              <span class="pipeline-block">INPUT</span
+              ><span class="pipeline-path"><i></i></span
+              ><span class="pipeline-core">Py</span
+              ><span class="pipeline-path"><i></i></span
+              ><span class="pipeline-block">OUTPUT</span>
+            </div>
+            <h3>Find a smarter way.</h3>
+            <p>
+              Small scripts, useful tools and clear logic. Exploring how a few
+              lines of code can take care of the repetitive work.
+            </p>
+            <div class="tags">
+              <span>Automation</span><span>Scripts</span
+              ><span>Problem solving</span>
+            </div>
+          </article>
+          <article class="tool-card reveal" data-tilt>
+            <div class="tool-top">
+              <span class="tool-icon">◇</span
+              ><span class="tiny-label">03 / GODOT + GDSCRIPT</span>
+            </div>
+            <div class="tool-art art-godot" aria-hidden="true">
+              <div class="game-grid"></div>
+              <span class="game-cube"></span><span class="game-satellite"></span
+              ><span class="art-tag">func _ready(): explore()</span>
+            </div>
+            <h3>Build another world.</h3>
+            <p>
+              Turning rules into play. Experiments with game logic, movement and
+              small worlds made to be explored.
+            </p>
+            <div class="tags">
+              <span>Game logic</span><span>Prototypes</span><span>Worlds</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="cosmic-break" aria-label="Creative approach">
+        <div class="cosmic-break-image"></div>
+        <div class="container cosmic-content reveal">
+          <span class="eyebrow">SOMEWHERE BETWEEN LOGIC &amp; IMAGINATION</span>
+          <p>Keep looking up.<br /><span>Keep building.</span></p>
+          <div class="cosmic-caption">
+            <span class="small-cross">+</span> The next idea is always out
+            there.
+          </div>
+        </div>
+        <div class="orbit-system" aria-hidden="true">
+          <div class="orbit orbit-one"><i></i></div>
+          <div class="orbit orbit-two"><i></i></div>
+          <div class="orbit-core"></div>
+        </div>
+      </section>
+
+      <section
+        class="works-section section container"
+        id="works"
+        aria-labelledby="works-title"
+      >
+        <div class="section-index reveal">
+          <span>04 / SELECTED EXPLORATIONS</span><span class="index-line"></span
+          ><span>A LOOK INSIDE THE ARCHIVE</span>
+        </div>
+        <div class="section-heading reveal">
+          <div>
+            <h2 id="works-title">
+              Every project.<br /><span class="accent"
+                >Another step forward.</span
+              >
+            </h2>
+            <p class="body-copy muted">
+              A few early web experiments from my original portfolio.
+            </p>
+          </div>
+          <a
+            class="text-link"
+            href="https://github.com/Shoxstil"
+            target="_blank"
+            rel="noopener noreferrer"
+            >More on GitHub
+            <span aria-hidden="true"
+              ><svg
+                class="arrow-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                aria-hidden="true"
+              >
+                <path d="M5 19 19 5M5 5h14v14" /></svg></span
+          ></a>
+        </div>
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <button
+              class="project-preview"
+              type="button"
+              data-project="stalkers"
+              aria-label="View Stalkers.com archive screenshot"
+            >
+              <div class="preview-bar">
+                <span></span><span></span><span></span
+                ><small>stalkers.com / early concept</small>
+              </div>
+              <img
+                src="./img/Stalkers.com - Google Chrome 26.06.2022 16_56_42.png"
+                loading="lazy"
+                width="1366"
+                height="722"
+                alt="Original Stalkers.com community website concept with a dark game-inspired layout"
+              /><span class="preview-open"
+                >View snapshot
+                <span
+                  ><svg
+                    class="arrow-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 19 19 5M5 5h14v14" /></svg></span
+              ></span>
+            </button>
+            <div class="project-info">
+              <div>
+                <span class="tiny-label">01 / COMMUNITY WEBSITE</span>
+                <h3>Stalkers.com</h3>
+              </div>
+              <span class="project-arrow" aria-hidden="true"
+                ><svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <path d="M5 19 19 5M5 5h14v14" /></svg
+              ></span>
             </div>
             <p>
-
+              A game-inspired community concept with a dark visual identity.
             </p>
-        </li>
-    </ul>
-    <div id="particles-js"></div>
-    <script src="particles.js"></script>
-    <script src="./js/app.js"></script>
-        <div class="skill_box" id="skills">
-            <div class="level">
-                <div class="level_box">
-                    <h3>Pro</h3>
-                    <h3>Norm</h3>
-                    <h3>Noob</h3>
-                    <h3>All is bad</h3>
-                </div>
-                <div class="stick"></div>
+            <div class="tags">
+              <span>HTML</span><span>CSS</span><span>Archive</span>
             </div>
-            <ul class="skills" aria-label="Programming skills">
-                <li class="skill-column" data-level="89" style="--level: 89%; --bar-color: #ffa500">
-                    <div class="skill-track" role="meter" aria-label="HTML" aria-valuemin="0" aria-valuemax="100" aria-valuenow="89">
-                        <span class="text-skill" aria-hidden="true">89%</span>
-                        <div class="skill-bar"><img src="./img/html5.png" alt="" class="icons"></div>
-                    </div>
-                    <span class="skill-name">HTML</span>
-                </li>
-                <li class="skill-column" data-level="79" style="--level: 79%; --bar-color: #2500ff">
-                    <div class="skill-track" role="meter" aria-label="CSS" aria-valuemin="0" aria-valuemax="100" aria-valuenow="79">
-                        <span class="text-skill" aria-hidden="true">79%</span>
-                        <div class="skill-bar"><img src="./img/css3.png" alt="" class="icons"></div>
-                    </div>
-                    <span class="skill-name">CSS</span>
-                </li>
-                <li class="skill-column" data-level="47" style="--level: 47%; --bar-color: #ffff00">
-                    <div class="skill-track" role="meter" aria-label="JavaScript" aria-valuemin="0" aria-valuemax="100" aria-valuenow="47">
-                        <span class="text-skill" aria-hidden="true">47%</span>
-                        <div class="skill-bar"><img src="./img/js.png" alt="" class="icons"></div>
-                    </div>
-                    <span class="skill-name">JavaScript</span>
-                </li>
-                <li class="skill-column" data-level="70" style="--level: 70%; --bar-color: #096b9d">
-                    <div class="skill-track" role="meter" aria-label="Python" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70">
-                        <span class="text-skill" aria-hidden="true">70%</span>
-                        <div class="skill-bar"><img src="./img/python_104451.png" alt="" class="icons"></div>
-                    </div>
-                    <span class="skill-name">Python</span>
-                </li>
-                <li class="skill-column" data-level="30" style="--level: 30%; --bar-color: #478cbf">
-                    <div class="skill-track" role="meter" aria-label="GDScript" aria-valuemin="0" aria-valuemax="100" aria-valuenow="30">
-                        <span class="text-skill" aria-hidden="true">30%</span>
-                        <div class="skill-bar"><img src="./img/godot.svg" alt="" class="icons"></div>
-                    </div>
-                    <span class="skill-name">GDScript</span>
-                </li>
-            </ul>
+          </article>
+          <article class="project-card reveal">
+            <button
+              class="project-preview"
+              type="button"
+              data-project="utube"
+              aria-label="View uTube archive screenshot"
+            >
+              <div class="preview-bar">
+                <span></span><span></span><span></span
+                ><small>utube / interface study</small>
+              </div>
+              <img
+                src="./img/uTube _ Образовательный видеопортал — Mozilla Firefox 26.06.2022 17_38_41.png"
+                loading="lazy"
+                width="1366"
+                height="768"
+                alt="Original uTube educational video portal interface study"
+              /><span class="preview-open"
+                >View snapshot
+                <span
+                  ><svg
+                    class="arrow-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 19 19 5M5 5h14v14" /></svg></span
+              ></span>
+            </button>
+            <div class="project-info">
+              <div>
+                <span class="tiny-label">02 / INTERFACE EXPLORATION</span>
+                <h3>uTube</h3>
+              </div>
+              <span class="project-arrow" aria-hidden="true"
+                ><svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <path d="M5 19 19 5M5 5h14v14" /></svg
+              ></span>
+            </div>
+            <p>
+              An early exploration of a content-rich educational video
+              interface.
+            </p>
+            <div class="tags">
+              <span>Interface study</span><span>Layout</span
+              ><span>Archive</span>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <button
+              class="project-preview"
+              type="button"
+              data-project="metal"
+              aria-label="View Metal archive screenshot"
+            >
+              <div class="preview-bar">
+                <span></span><span></span><span></span
+                ><small>metal / layout practice</small>
+              </div>
+              <img
+                src="./img/metal.png"
+                loading="lazy"
+                width="1366"
+                height="768"
+                alt="Metal construction landing page from the original portfolio archive"
+              /><span class="preview-open"
+                >View snapshot
+                <span
+                  ><svg
+                    class="arrow-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 19 19 5M5 5h14v14" /></svg></span
+              ></span>
+            </button>
+            <div class="project-info">
+              <div>
+                <span class="tiny-label">03 / LANDING PAGE STUDY</span>
+                <h3>Metal</h3>
+              </div>
+              <span class="project-arrow" aria-hidden="true"
+                ><svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <path d="M5 19 19 5M5 5h14v14" /></svg
+              ></span>
+            </div>
+            <p>
+              A construction landing page study focused on structure and
+              composition.
+            </p>
+            <div class="tags">
+              <span>HTML</span><span>CSS</span><span>Layout practice</span>
+            </div>
+          </article>
         </div>
-        <ul class="main-facts">
-            <li class="fact-child gyro" data-aos="fade-right">
-                <img src="./img/quotation.svg" alt="">
-                <div class="title" >Drop of humor</div>
-                <ul>
-                    <li>I Drink Water</li>
-                    <li>I love Drop of humor</li>
-                    <li>I have Laptop</li>
-                    <li>I don't have a pet</li>
-                </ul>
-            </li>
-            <li class="fact-child gyro" data-aos="fade-in">
-                <img src="./img/quotation.svg" alt="">
-                <div class="title">What do i use Js</div>
-                <ul>
-                    <li>For Websites </li>
-                    <li>For Sliders</li>
-                    <li>For Calculators</li>
-                    <li>For Animations</li>
-                </ul>
-            </li>
-            <li class="fact-child gyro" data-aos="fade-left">
-                <img src="./img/quotation.svg" alt="">
-                <div class="title">What do i use Js</div>
-                <ul>
-                    <li>For Websites </li>
-                    <li>For Sliders</li>
-                    <li>For Calculators</li>
-                    <li>For Animations</li>
-                </ul>
-            </li>
-            <li class="fact-child gyro" data-aos="fade-right">
-                <img src="./img/quotation.svg" alt="">
-                <div class="title">What do i use Js</div>
-                <ul>
-                    <li>For Websites </li>
-                    <li>For Sliders</li>
-                    <li>For Calculators</li>
-                    <li>For Animations</li>
-                </ul>
-            </li>
-            <li class="fact-child gyro" data-aos="fade-in">
-                <img src="./img/quotation.svg" alt="">
-                <div class="title">What do i use Js</div>
-                <ul>
-                    <li>For Websites </li>
-                    <li>For Sliders</li>
-                    <li>For Calculators</li>
-                    <li>For Animations</li>
-                </ul>
-            </li>
-            <li class="fact-child gyro" data-aos="fade-left">
-                <img src="./img/quotation.svg" alt="">
-                <div class="title">(Copyright ©)</div>
-                <ul>
-                    <li>
-                        <a href="https://www.flaticon.com/">Icons from Flaticon</a>
-                    </li>
-                    <li>
-                        <a href="https://fontawesome.com/icons">Icons from Font-Awesome</a>
-                    </li>
-                    <li>
-                        <a href="https://www.freepik.com/">Img from Freepik</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-        <div class="middle_main_box">
-            <ul class="facts">
-                <li>
-                    <img src="./img/SVG.svg" alt="" data-aos="zoom-in-up">
-                </li>
-                <li>
-                    <div class="typewrite" id="works" data-aos="zoom-in-up">
-                        <h2>
-                            The Hardest Works
-                        </h2>
-                    </div>
-                </li>
-            </ul>
-            
-            <div id="particles-j"></div>
-            <ul class="main_information">
-                <li class="main_information_child">
-                    <span class="main_icon">
-                        <i class="fa-solid fa-align-right"></i>
-                    </span>
-                    <div class="score">
-                        59+
-                    </div>
-                    <div class="main_title">
-                        Projects
-                    </div>
-                </li>
-                <li class="main_information_child">
-                    <span class="main_icon">
-                        <i class="fa-solid fa-user"></i>
-                    </span>
-                    <div class="score">
-                        <i class="fa-solid fa-infinity"></i>
-                    </div>
-                    <div class="main_title">Happy clients</div>
-                </li>
-                <li class="main_information_child">
-                    <span class="main_icon">
-                        <i class="fa-solid fa-clock"></i>
-                    </span>
-                    <div class="score">390+</div>
-                    <div class="main_title">Hours of code</div>
-                </li>
-                <li class="main_information_child">
-                    <span class="main_icon">
-                        <i class="fa-solid fa-code"></i>
-                    </span>
-                    <div class="score">10000+</div>
-                    <div class="main_title">Lines of code</div>
-                </li>
-            </ul>
-        </div>
-    <script type="text/javascript" src="./js/vanilla.min.js"></script>
-    <script src="./js/ap.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./aos.js"></script>
-    <script src="./js/scroll.js"></script>
-    <script type="text/javascript">
-	if (window.VanillaTilt) VanillaTilt.init(document.querySelectorAll(".gyro"), {
-		max: 25,
-		speed: 400
-	});
-</script>
+      </section>
 
-</body>
+      <footer class="site-footer" id="contact">
+        <div class="container">
+          <div class="footer-top reveal">
+            <span class="eyebrow">THE NEXT CHAPTER</span>
+            <h2>
+              Good things start<br />with <span class="accent">“hello”.</span>
+            </h2>
+            <a
+              class="button button-primary"
+              href="https://github.com/Shoxstil"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Let's connect on GitHub
+              <span aria-hidden="true"
+                ><svg
+                  class="arrow-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                >
+                  <path d="M5 19 19 5M5 5h14v14" /></svg></span
+            ></a>
+          </div>
+          <div class="footer-bottom">
+            <a class="logo" href="#home"
+              >SHOX<span>a</span
+              ><span class="logo-dot" aria-hidden="true"></span
+            ></a>
+            <p>Code. Create. Explore.</p>
+            <a class="text-link" href="#home"
+              >Back to the stars <span aria-hidden="true">↑</span></a
+            >
+          </div>
+          <div class="footer-credits">
+            <span>© <span id="year">2026</span> Shokhrukh Shavkatov</span
+            ><span>Built with curiosity. Original archive: 2023.</span>
+            <details>
+              <summary>Credits</summary>
+              <p>
+                Space artwork generated for this portfolio. Orbitron font: The
+                Orbitron Project Authors, SIL OFL. Archive assets:
+                <a
+                  href="https://www.freepik.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Freepik</a
+                >,
+                <a
+                  href="https://www.flaticon.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Flaticon</a
+                >. Bundled library and font licenses are retained in the
+                repository.
+              </p>
+            </details>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <dialog class="project-dialog" aria-labelledby="project-dialog-title">
+      <div class="dialog-header">
+        <div>
+          <span class="tiny-label">ORIGINAL PORTFOLIO ARCHIVE</span>
+          <h2 id="project-dialog-title">Project snapshot</h2>
+        </div>
+        <button
+          class="dialog-close"
+          type="button"
+          aria-label="Close project snapshot"
+        >
+          ×
+        </button>
+      </div>
+      <p class="dialog-note">
+        An original screenshot from the archive — a look at an early interface
+        exploration.
+      </p>
+      <img class="dialog-image" alt="" />
+      <div class="dialog-footer">
+        <span>Archive / interface study</span
+        ><button class="text-link dialog-dismiss" type="button">
+          Back to projects
+          <span aria-hidden="true"
+            ><svg
+              class="arrow-icon arrow-reverse"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <path d="M5 19 19 5M5 5h14v14" /></svg
+          ></span>
+        </button>
+      </div>
+    </dialog>
+  </body>
 </html>
